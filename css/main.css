@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/mysticforge.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#gridWrap {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+/* ---------Header--------- */
+#bigHeader {
+    grid-area: header;
+}
+
+#header {
+    height: 90%;
+    display: flex;
+    background-image: linear-gradient(#29034a, #29034a, #29034a, #470680);
+    border-bottom: 2px black solid;
+}
+
+#logo-title {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+#logo-container > img{
+    width: 350px;
+    padding-bottom: 5px;
+}
+
+#navBar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: stretch;
+    list-style: none;
+}
+
+#blueBar {
+    height: 10%;
+    background-image: linear-gradient(#6D9098, rgba(109, 144, 152, 0));
+}
+
+#navBar > a:visited, #navBar > a:link {
+    text-decoration: none;
+    color: white;
+    font-family: Impact;
+    font-size: 25px;
+    border-left: 2px black solid;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: #6D9098;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+/* ---------Main--------- */
+main {
+    grid-area: main;
+    padding-top: 3%;
+}
+
+#centerDiv {
+    width: 75%;
+    margin: 0 auto;
+    background: rgba(235, 222, 212, .6);
+    height: 100%;
+}
+
+#home {display: block;}
+#members {display: none;}
+#events {display: none;}
+#joinus {display: none;}
+
+
+    /* ------Home------ */
+#welcome {
+    padding-top: 50px;
+    font-size: 80px;
+    text-align: center;
+    font-family: Verdana;
+}
+
+#text-picture {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-top: 50px;
+    border-bottom: 2px black solid;
+}
+
+#home-text {
+    margin: 50px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    font-family: Candara;
+}
+
+#home-text > ul {
+    list-style-image: url("../img/Mystic_Coin.png");
+    margin-left: 60px;
+}
+
+#img-container > img {
+    width: 900px;
+    border: 10px #29034a solid;
+    box-shadow: 0px 2px 5px black, 0px 0px 5px black;
+}
+
+#home > h2 {
+    text-align: center;
+    padding: 30px;
+    font-family: Candara;
+}
+
+#youtube-video {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#youtube-video > iframe {
+    height: 400px;
+    width: 710px;
+}
+
+@media screen and (max-width: 768px) {
+    #text-picture {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #img-container > img {
+        width: 100%;
+        border: 5px #29034a solid;
+        box-shadow: 0px 2px 5px black, 0px 0px 5px black;
+    }
+}
+
+/* ------Members------ */
+#member-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px black solid;
+    font-family: Verdana;
+}
+
+#member-header > div > img {
+    border: 5px #542d96 solid;
+}
+
+#member-header > h1 {
+    font-size: 35pt;
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+        /* ------Leaders------ */
+#leadership {
+    border-bottom: 2px black solid;
+    font-family: Candara;
+}
+
+#leadership-bar {
+    text-align: center;
+    border-bottom: 2px black solid;
+    padding: 10px;
+
+    font-size: 25px;
+}
+
+#leadership-people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 30px;
+}
+
+#guildLeader-pic > img{
+    border: 5px #29034a solid;
+    width: 70%;
+    box-shadow: 2px -2px 10px black;
+}
+
+#coLeader1-pic > img, #coLeader2-pic > img{
+    width: 70%;
+    border: 5px #6D9098 solid;
+    box-shadow: 2px -2px 10px black;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+        /* ------Guild Members------ */
+#guild-members {
+    font-family: Candara;
+}
+
+#member-bar {
+    text-align: center;
+    border-bottom: 2px black solid;
+    padding: 10px;
+
+    font-size: 25px;
+}
+
+#member-peoples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.member-pic > img {
+    width: 70%;
+    box-shadow: 2px -2px 10px black;
+    border: 2px black solid;
+}
+
+@media screen and (max-width: 768px) {
+    #member-header > h1 {
+        font-size: 24pt;
+    }
+
+    #member-header > div > img {
+        width: 70%;
+    }
+
+    #leadership-people {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #coLeader1 {padding-bottom: 25px;}
+    #guildLeader {padding-bottom: 25px;}
+    #coLeader2 {padding-bottom: 25px;}
+
+    #member-peoples {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ---------Events--------- */
+#event-header {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-family: Verdana;
+    border-bottom: 2px black solid;
+}
+
+#event-content {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px black solid;
+}
+
+#event-content > div {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px black solid;
+}
+
+#openworld-header, #strikesraid-header, #wvw-header {
+    font-size: 20px;
+    padding: 10px;
+    font-family: Verdana;
+    border-bottom: 2px black solid;
+}
+
+#openworld-content, #strikesraid-content, #wvw-content {
+    padding: 30px;
+    font-family: Candara;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.month-day {
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    border: 2px #470680 solid;
+}
+
+.month {
+    color: #6D9098;
+    font-size: 25px;
+}
+
+.day {
+    color: white;
+    font-size: 25px;
+}
+
+.event-description {
+    width: 80%;
+}
+
+.event-description > p {
+    font-size: 25px;
+}
+
+#lfg-info {
+    margin: 30px auto 30px auto;
+    padding: 10px 20px 10px 20px;
+    width: 50%;
+    border: 4px #29034a solid;
+    background-color: rgb(235, 222, 212);
+    border-radius: 10px;
+    font-family: Candara;
+}
+
+#lfg-info-banner {
+    font-size: 20px;
+    text-align: center;
+}
+
+#lfg-info-content {
+    font-size: 20px;
+}
+
+#lfg-info-content > p {
+    padding-top: 15px;
+}
+
+#lfg-info-content > ol {
+    padding-top: 20px;
+    margin-left: 200px;
+}
+
+#lfg-info-content > ol > li {
+    padding: 5px;
+}
+
+@media screen and (min-width: 769px) {
+    #open-world {
+        border-right: 2px black solid;
+    }
+    
+    #wvw {
+        border-left: 2px black solid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #lfg-info {
+        width: 80%;
+    }
+    
+    #event-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #lfg-info-content > ol {
+        padding-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+/* ---------Join Us--------- */
+#joinus-header {
+    text-align: center;
+    font-size: 25pt;
+    padding: 20px;
+    border-bottom: 2px black solid;
+    font-family: Verdana;
+}
+
+#joinus-description {
+    text-align: center;
+    font-size: 20pt;
+    font-family: Candara;
+}
+
+#joinus-picture > figure > img{
+    width: 900px;
+    border: 10px #29034a solid;
+    box-shadow: 0px 2px 5px black, 0px 0px 5px black;
+}
+
+
+#joinus-description {
+    margin: 40px;
+}
+
+#joinus-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#joinus-howto {
+    width: 35%;
+    border: 4px #29034a solid;
+    background-color: rgb(235, 222, 212);
+    border-radius: 10px;
+    height: 100%;
+}
+
+#joinus-howto-title {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 20pt;
+    border-bottom: 4px #29034a solid;
+    padding: 10px;
+}
+
+#joinus-howto > p {
+    margin-left: 15px;
+    padding: 10px;
+    font-family: Candara;
+}
+
+#joinus-howto > ol {
+    margin-left: 30px;
+    padding: 10px;
+    font-family: Candara;
+}
+
+#joinus-howto > ol > li {
+    margin-bottom: 20px;
+}
+
+#joinus-howto > p, ol {
+    font-size: 15pt;
+}
+
+figcaption {
+    font-family: Candara;
+    font-size: 15pt;
+}
+
+@media screen and (max-width: 768px) {
+    #joinus-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #joinus-howto {
+        width: 75%;
+        margin-bottom: 40px;
+    }
+
+    #joinus-picture > figure {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #joinus-picture > figure > img {
+        width: 90%;
+        border: 5px #29034a solid;
+        box-shadow: 0px 2px 5px black, 0px 0px 5px black;
+    }
+}
+
+/* ---------Footer--------- */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
+#footerWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    background: rgb(235, 222, 212);
+    border-top: 2px black solid;
+}
+
+#footer-logo-container > img{
+    width: 300px;
+}
+
+#sms {
+    width: 20%;
+    text-align: center;
+    font-family: Candara;
+}
+
+.icons > img{
+    width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    #footerWrap {
+        gap: 50px;
+    }
+
+    #footer-logo-container > img{
+        width: 250px;
+    }
+
+    #sms {
+        font-size: 10pt;
+        width: 250px;
+    }
+}
